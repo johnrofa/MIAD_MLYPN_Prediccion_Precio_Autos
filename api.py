@@ -1,14 +1,13 @@
 #!/usr/bin/python
-from flask import Flask, request, jsonify
+from flask import Flask
 from flask_restx import Api, Resource, fields
 import joblib
 from m09_model_deployment_01 import  Modelos
-import json
-import os
+
 
 from flask_cors import CORS
-from xgboost import XGBRegressor
-import numpy as np
+
+
 
 leMake = joblib.load('leMake_01.pkl')
 leModel = joblib.load('leModel_01.pkl')
