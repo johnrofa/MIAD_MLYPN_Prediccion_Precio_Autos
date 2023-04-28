@@ -8,12 +8,18 @@ from m09_model_deployment_01 import  Modelos
 from flask_cors import CORS
 
 
-
-leMake = joblib.load('leMake_01.pkl')
-leModel = joblib.load('leModel_01.pkl')
-leState = joblib.load('leState_01.pkl')
-regRF11 = joblib.load('phishing_clf_01.pkl')
 xgboost1 = joblib.load('regresion.pkl')
+print('xgboost1')
+regRF11 = joblib.load('phishing_clf_01.pkl')
+print('regRF11')
+leMake = joblib.load('leMake_01.pkl')
+print('------------------------------')
+leModel = joblib.load('leModel_01.pkl')
+print('------------------------------')
+leState = joblib.load('leState_01.pkl')
+print('------------------------------')
+
+
 
 
 # Definición aplicación Flask
