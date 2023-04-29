@@ -13,14 +13,20 @@ from sklearn.preprocessing import LabelEncoder
 from xgboost import XGBRegressor
 import numpy
 
+print("---------inicio-----------")
+leMake = joblib.load('leMake_01.pkl')
+print("---------inicio 2-----------")
+leModel = joblib.load('leModel_01.pkl')
+print("---------inicio 3-----------")
+leState = joblib.load('leState_01.pkl')
+
+
 regRF11 = joblib.load('phishing_clf_01.pkl')
 print('regRF11')
 xgboost1 = joblib.load('regresion.pkl')
 print('xgboost1')
 
-leMake = joblib.load('leMake_01.pkl')
-leModel = joblib.load('leModel_01.pkl')
-leState = joblib.load('leState_01.pkl')
+
 
 
 
