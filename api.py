@@ -16,6 +16,8 @@ from xgboost import XGBRegressor
 print('-------------inicio-----------')
 xgboost1 = joblib.load('regresion.pkl')
 print('xgboost1')
+
+'''
 regRF11 = joblib.load('phishing_clf_01.pkl')
 print('regRF11')
 leMake = joblib.load('leMake_01.pkl')
@@ -24,7 +26,7 @@ leModel = joblib.load('leModel_01.pkl')
 print('------------leModel------------')
 leState = joblib.load('leState_01.pkl')
 print('-----------leState--------------')
-
+'''
 
 
 
