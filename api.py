@@ -1,32 +1,24 @@
-#!/usr/bin/python
-import os
+#!/usr/bin/env python
+# coding: utf-8
+# In[ ]:
 from flask import Flask
 from flask_restx import Api, Resource, fields
 import joblib
-from m09_model_deployment_01 import  Modelos
 from flask_cors import CORS
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+from m09_model_deployment_01 import Modelos
+
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
 from xgboost import XGBRegressor
 
-print('-------------inicio-----------')
 xgboost1 = joblib.load('regresion.pkl')
 print('xgboost1')
-
-'''
 regRF11 = joblib.load('phishing_clf_01.pkl')
-print('regRF11')
 leMake = joblib.load('leMake_01.pkl')
-print('-----------leMake------------')
 leModel = joblib.load('leModel_01.pkl')
-print('------------leModel------------')
 leState = joblib.load('leState_01.pkl')
-print('-----------leState--------------')
-'''
+
 
 
 
@@ -121,8 +113,6 @@ class PhishingApi(Resource):
 
         resultado = Modelos(datos, leMake, leModel, leState, aplicar_modelo)
 
-        print('********resultado******** :', resultado)
-
         return {
                    "result": str(resultado)
                }, 200
@@ -132,3 +122,4 @@ class PhishingApi(Resource):
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000)
+
