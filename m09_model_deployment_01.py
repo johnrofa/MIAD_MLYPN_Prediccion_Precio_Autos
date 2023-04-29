@@ -1,6 +1,10 @@
 #!/usr/bin/python
 import pandas as pd
 
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import LabelEncoder
+from xgboost import XGBRegressor
+
 def Modelos(datos1, leMake, leModel, leState, Modelo):
 
     # Leer los datos post
