@@ -1,23 +1,17 @@
 #!/usr/bin/python
+import os
 from flask import Flask
 from flask_restx import Api, Resource, fields
 import joblib
-import os
 from m09_model_deployment_01 import  Modelos
 from flask_cors import CORS
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
-from xgboost import XGBRegressor
-from sklearn.metrics import mean_squared_error as mse
-from sklearn.metrics import mean_absolute_error as mae
 from sklearn.preprocessing import LabelEncoder
-
+from xgboost import XGBRegressor
 
 print('-------------inicio-----------')
 xgboost1 = joblib.load('regresion.pkl')
