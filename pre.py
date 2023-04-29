@@ -11,10 +11,13 @@ from m09_model_deployment_01 import Modelos
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
 from xgboost import XGBRegressor
+import numpy
 
+regRF11 = joblib.load('phishing_clf_01.pkl')
+print('regRF11')
 xgboost1 = joblib.load('regresion.pkl')
 print('xgboost1')
-regRF11 = joblib.load('phishing_clf_01.pkl')
+
 leMake = joblib.load('leMake_01.pkl')
 leModel = joblib.load('leModel_01.pkl')
 leState = joblib.load('leState_01.pkl')
