@@ -86,7 +86,7 @@ class PhishingApi(Resource):
 
     @api.doc(parser=parser)
     @api.marshal_with(resource_fields)
-    def post(self):
+    def get(self):
         args = parser.parse_args()
         print(args)
 
